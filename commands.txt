@@ -1,0 +1,8 @@
+#build and run everything
+docker-compose up --build
+
+#run built containers
+docker-compose up
+
+#remove containers
+docker rm mysql-container1 ms-cars-server ms-users-server ms_nginx

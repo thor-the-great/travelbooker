@@ -1,0 +1,6 @@
+FROM java:8
+LABEL maintainer=“great_dev@mail.com”
+VOLUME /tmp
+EXPOSE 8080
+ADD /spring-boot-ms-users/target/spring-boot-ms-users-0.0.1-SNAPSHOT.jar spring-boot-ms-users-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java","-jar","spring-boot-ms-users-0.0.1-SNAPSHOT.jar"]
