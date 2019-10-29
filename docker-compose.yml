@@ -1,6 +1,6 @@
 version: '3.3'
 services:
-  ms-cars-server:
+  cars-server:
     depends_on:
       - db
     container_name: ms-cars-server
@@ -21,7 +21,7 @@ services:
     environment:
       spring.profiles.active: dev
 
-  ms-users-server:
+  users-server:
     depends_on:
       - db
     container_name: ms-users-server
@@ -76,8 +76,8 @@ services:
     networks:
       - spring-cloud-network
     depends_on:
-      - ms-cars-server
-      - ms-users-server
+      - cars-server
+      - users-server
 
 networks:
   spring-cloud-network:
